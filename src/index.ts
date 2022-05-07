@@ -1,7 +1,7 @@
-import { config } from "dotenv";
+import dotenv from "dotenv";
 import { Server } from "./models";
 
-config({ path: './src/.env' });
+dotenv.config({ path: './src/.env' });
 
 const server = new Server();
 
