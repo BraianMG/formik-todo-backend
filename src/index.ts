@@ -1,7 +1,8 @@
-// import { config } from "dotenv";
+import { config } from "dotenv";
 import { Server } from "./models";
 
-// TODO: ver de qué manera importar y disponibilizar la config de dotenv
+config({ path: './src/.env' });
+
 const server = new Server();
 
 server.listen();

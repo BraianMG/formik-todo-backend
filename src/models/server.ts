@@ -12,7 +12,6 @@ export class Server {
   todosPath: string;
 
   constructor() {
-    console.log(process.env.HOST, process.env.PORT, process.env.MONGODB_CNN, process.env.SECRETWJT)
     this.app = express();
     this.host = process.env.HOST || "0.0.0.0";
     // TODO: mejorar this.port
