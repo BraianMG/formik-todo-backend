@@ -19,6 +19,12 @@ export class Server {
     this.authPath = "/api/v1/auth";
     this.usersPath = "/api/v1/users";
     this.todosPath = "/api/v1/todos";
+
+    this.middlewares();
+
+    this.routes();
+
+    this.connectDB();
   }
 
   middlewares() {
