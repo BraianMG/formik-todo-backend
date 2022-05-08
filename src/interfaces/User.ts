@@ -7,4 +7,4 @@ export interface IUser {
   disabled: boolean;
 }
 
-export type UserRoles = "USER_ROLE" | "ADMIN_ROLE" | "USER_ROLE";
+export type UserRoles = "ADMIN_ROLE" | "USER_ROLE";

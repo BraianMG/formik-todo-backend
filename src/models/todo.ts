@@ -20,4 +20,6 @@ const TodoSchema = new Schema<ITodo>({
   },
 });
 
+// TODO: tratar de no devolver '__v'
+
 export const Todo = model("Todo", TodoSchema);

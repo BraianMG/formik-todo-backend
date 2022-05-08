@@ -21,41 +21,44 @@ yarn dev
 ```
 
 ## Endpoints
-- Auth:
-  - __GET__ /api/v1/auth
+- __Auth:__
+  - __POST__ /api/v1/auth -> (Iniciar sesión)
     ```javascript
-    ...
+    Body (JSON):
+    {
+      "email": "example@example.com",
+      "password": "atLeastEightCharacters"
+    }
     ```
-  - __POST__ /api/v1/auth
+- __Users:__
+  - __GET__ /api/v1/users -> (Obtener todos los usuarios)
+  - __POST__ /api/v1/users -> (Crear un nuevo usuario)
     ```javascript
-    ...
+    Body (JSON):
+    {
+      "name": "example",
+      "email": "example@example.com",
+      "password": "atLeastEightCharacters"
+    }
     ```
-  - __PUT__ /api/v1/auth
+  - __PUT__ /api/v1/users/:id -> (Editar información de un usuario)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
+
+    Body (JSON):
+    {
+      "name": "example",
+      "email": "example@example.com",
+      "password": "atLeastEightCharacters"
+    }
     ```
-  - __DELETE__ /api/v1/auth
+  - __DELETE__ /api/v1/users/:id -> (Eliminar un usuario)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
     ```
-- Users:
-  - __GET__ /api/v1/users
-    ```javascript
-    ...
-    ```
-  - __POST__ /api/v1/users
-    ```javascript
-    ...
-    ```
-  - __PUT__ /api/v1/users
-    ```javascript
-    ...
-    ```
-  - __DELETE__ /api/v1/users
-    ```javascript
-    ...
-    ```
-- Todos:
+- __Todos:__
   - __GET__ /api/v1/todos
     ```javascript
     ...

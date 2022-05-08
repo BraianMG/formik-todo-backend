@@ -6,6 +6,7 @@ export const errorValidation = (
   res: Response,
   next: NextFunction
 ) => {
+  // TODO: Devolver un mensaje más personalizado en base a los arrores recibidos}
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
