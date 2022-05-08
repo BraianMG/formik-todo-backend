@@ -30,6 +30,7 @@ yarn dev
       "password": "atLeastEightCharacters"
     }
     ```
+---
 - __Users:__
   - __GET__ /api/v1/users -> (Obtener todos los usuarios)
   - __POST__ /api/v1/users -> (Crear un nuevo usuario)
@@ -58,20 +59,38 @@ yarn dev
     Headers:
     "x-token": token
     ```
+---
 - __Todos:__
-  - __GET__ /api/v1/todos
+  - __GET__ /api/v1/todos -> (Obtener todas las tareas)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
     ```
-  - __POST__ /api/v1/todos
+  - __POST__ /api/v1/todos -> (Crear una tarea)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
+
+    Body (JSON):
+    {
+      "title": "Example",
+      "description": "Example..."
+    }
     ```
-  - __PUT__ /api/v1/todos
+  - __PUT__ /api/v1/todos/:id -> (Editar una tarea)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
+
+    Body (JSON):
+    {
+      "title": "Example",
+      "description": "Example...",
+      "completed": true
+    }
     ```
-  - __DELETE__ /api/v1/todos
+  - __DELETE__ /api/v1/todos/:id -> (Eliminar una tarea)
     ```javascript
-    ...
+    Headers:
+    "x-token": token
     ```

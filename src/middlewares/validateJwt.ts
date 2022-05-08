@@ -34,6 +34,7 @@ export const validateJWT = async (
       });
     }
 
+    req.userId = user.id;
     next();
   } catch (error) {
     console.log(error);
