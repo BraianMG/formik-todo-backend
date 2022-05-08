@@ -14,8 +14,7 @@ export class Server {
   constructor() {
     this.app = express();
     this.host = process.env.HOST || "0.0.0.0";
-    // TODO: mejorar this.port
-    this.port = 8080; // parseInt(process.env.PORT) || 8080;
+    this.port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
     this.authPath = "/api/v1/auth";
     this.usersPath = "/api/v1/users";
     this.todosPath = "/api/v1/todos";
