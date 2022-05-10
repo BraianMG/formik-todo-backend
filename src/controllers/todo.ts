@@ -5,7 +5,6 @@ import { Todo } from "../models";
 export const todosGet = async (req: Request, res: Response) => {
   try {
     const filter = {
-      user: req.userId,
       deleted: false,
     };
     const tasks = await Todo.find(filter);
@@ -26,7 +25,6 @@ export const todosPost = async (req: Request, res: Response) => {
     const data = {
       title,
       description,
-      user: req.userId,
     };
 
     const newTodo = new Todo(data);
