@@ -7,11 +7,9 @@ export const todosGet = async (req: Request, res: Response) => {
     const filter = {
       deleted: false,
     };
-    const tasks = await Todo.find(filter);
+    const todos = await Todo.find(filter);
 
-    res.status(200).json({
-      tasks,
-    });
+    res.status(200).json(todos);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error });
