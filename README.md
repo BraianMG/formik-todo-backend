@@ -61,6 +61,7 @@ yarn dev
     ```
 ---
 - __Todos:__
+  - Los siguientes endpoints manipulan las tareas del usuario especificado en el token
   - __GET__ /api/v1/todos -> (Obtener todas las tareas)
     ```javascript
     Headers:
