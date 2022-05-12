@@ -21,6 +21,32 @@ yarn dev
 ```
 
 ## Endpoints
+- __Todos:__
+  - __GET__ /api/v1/todos -> (Obtener todas las tareas)
+  - __POST__ /api/v1/todos -> (Crear una tarea)
+    ```javascript
+    Body (JSON):
+    {
+      "title": "Example",
+      "description": "Example..."
+    }
+    ```
+  - __PUT__ /api/v1/todos/:id -> (Editar una tarea)
+    ```javascript
+    Body (JSON):
+    {
+      "title": "Example",
+      "description": "Example...",
+      "completed": true
+    }
+    ```
+  - __DELETE__ /api/v1/todos/:id -> (Eliminar una tarea)
+
+---
+---
+
+## __Próxima versión__
+## Endpoints
 - __Auth:__
   - __POST__ /api/v1/auth -> (Iniciar sesión)
     ```javascript
