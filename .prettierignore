@@ -1,0 +1,8 @@
+.vscode
+dist
+mongo
+node_modules
+package.json
+package-lock.json
+README.md
+yarn.lock

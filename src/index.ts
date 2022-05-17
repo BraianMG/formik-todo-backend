@@ -1,8 +1,8 @@
-import dotenv from "dotenv";
-import { Server } from "./models";
+import dotenv from 'dotenv'
+import { Server } from './models'
 
-dotenv.config({ path: './src/.env' });
+dotenv.config({ path: './src/.env' })
 
-const server = new Server();
+const server = new Server()
 
-server.listen();
+server.listen()
